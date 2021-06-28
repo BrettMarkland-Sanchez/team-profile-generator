@@ -17,7 +17,7 @@
   ### Brett.MarklandSanchez@gmail.com
   ### https://github.com/BrettMarkland-Sanchez
   ## Testing
-  Tests included validate the logic for the eacch of the classes used to construct the employee objects.
+  Tests included validate the logic for the each of the classes used to construct the employee objects.
   ## License
   
     Copyright © Brett Markland-Sanchez. All rights reserved.
