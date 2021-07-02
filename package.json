@@ -1,0 +1,26 @@
+{
+  "name": "teamprofilegenerator",
+  "version": "1.0.0",
+  "description": "Uses the console in Node to dynamically create a team roster webpage.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrettMarkland-Sanchez/TeamProfileGenerator.git"
+  },
+  "author": "Brett Markland-Sanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrettMarkland-Sanchez/TeamProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/BrettMarkland-Sanchez/TeamProfileGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.1",
+    "jest": "^27.0.6"
+  }
+}
