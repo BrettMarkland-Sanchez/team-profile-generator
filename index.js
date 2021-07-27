@@ -3,6 +3,7 @@ const { Manager } = require('./lib/manager');
 const { Engineer } = require('./lib/engineer');
 const { Intern } = require('./lib/intern');
 const inquirer = require('inquirer');
+const fs = require('fs');
 
 // Staff array for storing Employee objects
 const staff = [];
@@ -137,9 +138,13 @@ function intern() {
 // Uses code from render.js to create cards from staff array values
 function render(arr) {
     // Use a for-of loop here to generate HTML
+    for (const employee of staff) {
 
+    }
     // Print staff array for testing
-    console.log(staff);
+    fs.writeFile('./dist/index.html', html, err => {
+        
+    });
 }
 
 // Calls function start

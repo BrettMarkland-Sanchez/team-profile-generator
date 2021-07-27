@@ -7,6 +7,7 @@
     "lib": "lib"
   },
   "dependencies": {
+    "fs": "0.0.1-security",
     "inquirer": "^8.1.2",
     "validator": "^13.6.0"
   },
