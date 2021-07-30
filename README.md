@@ -2,6 +2,8 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Description
   Takes user input via the console in Node to produce a coding team webpage.
+  ## Demo Video
+  [![Video Example Link](https://i.ibb.co/j3F7ndN/team-profile-generator-demo-thumb.png)](https://vimeo.com/581010451 "Team Profile Generator Demonstration Video")
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
