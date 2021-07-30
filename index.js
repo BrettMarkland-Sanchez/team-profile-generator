@@ -4,6 +4,7 @@ const { Engineer } = require('./lib/engineer');
 const { Intern } = require('./lib/intern');
 const inquirer = require('inquirer');
 const fs = require('fs');
+const render = require('./utils/render')
 
 // Staff array for storing Employee objects
 const staff = [];
@@ -40,6 +41,7 @@ function manager() {
         }
     ]).then((data) => { // New Manager creation
         let employee = new Manager(data.name, data.id, data.email, data.office);
+        employee.role = employee.getRole();
         // Add new Manager to the staff array
         staff.push(employee);
     }).then(() => query()); // Chain more options from query()
@@ -67,7 +69,7 @@ function query() {
                 intern();
             } break;
             case 'Exit program and generate team profile': {
-                render();
+                writeFile(staff);
             } break;
         };
     });
@@ -99,6 +101,7 @@ function engineer() {
         }
     ]).then((data) => { // New Engineer creation
         let employee = new Engineer(data.name, data.id, data.email, data.github);
+        employee.role = employee.getRole();
         // Add new Engineer to the staff array
         staff.push(employee);
     }).then(() => query()); // Chain more options from query()
@@ -130,20 +133,23 @@ function intern() {
         }
     ]).then((data) => { // New Intern creation
         let employee = new Intern(data.name, data.id, data.email, data.school);
+        employee.role = employee.getRole();
         // Add new Intern to the staff array
         staff.push(employee);
     }).then(() => query()); // Chain more options from query()
 }
 
 // Uses code from render.js to create cards from staff array values
-function render(arr) {
+function writeFile(staff) {
     // Use a for-of loop here to generate HTML
+    let html = fs.readFileSync('./src/teamRosterTop.html');
     for (const employee of staff) {
-
+        html += render(employee);
     }
-    // Print staff array for testing
+    html += fs.readFileSync('./src/teamRosterBottom.html');
+    // Write final html content to the distribution folder
     fs.writeFile('./dist/index.html', html, err => {
-        
+        console.error(err);
     });
 }
 
